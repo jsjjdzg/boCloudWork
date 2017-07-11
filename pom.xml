@@ -54,8 +54,19 @@
 		<!-- mybatis 增加插件 https://github.com/baomidou/mybatis-plus -->
 		<dependency>
 			<groupId>com.baomidou</groupId>
+			<artifactId>mybatisplus-spring-boot-starter</artifactId>
+			<version>1.0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus</artifactId>
-			<version>1.2.2</version>
+			<version>2.1-gamma</version>
+		</dependency>
+		<!-- 模板引擎 -->
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
 		</dependency>
 		<!-- com.zaxxer.HikariCP 性能爆炸连接池组件 Java8 -->
 		<dependency>
