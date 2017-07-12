@@ -1,7 +1,7 @@
 package com.bocloud.work.service;
 
-import com.bocloud.work.entity.Department;
 import com.baomidou.mybatisplus.service.IService;
+import com.bocloud.work.entity.Department;
 
 /**
  * <p>
@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.service.IService;
  * @since 2017-07-11
  */
 public interface IDepartmentService extends IService<Department> {
-	
+
 }

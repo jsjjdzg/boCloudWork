@@ -15,12 +15,12 @@ import com.bocloud.work.service.IDepartmentService;
 public class DepartmentController {
 
 	@Autowired
-	private IDepartmentService departmentService;
+	private IDepartmentService iDepartmentService;
 
 	@RequestMapping("/test")
 	@ResponseBody
 	public Department test() {
-		Department d = departmentService.selectById(1);
+		Department d = iDepartmentService.selectById(1);
 		return d;
 	}
 }
