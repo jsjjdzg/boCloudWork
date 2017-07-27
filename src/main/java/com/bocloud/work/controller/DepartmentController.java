@@ -20,7 +20,7 @@ public class DepartmentController {
 	@RequestMapping("/test")
 	@ResponseBody
 	public Department test() {
-		Department d = iDepartmentService.selectById(1);
+		Department d = iDepartmentService.selectById(2);
 		return d;
 	}
 }

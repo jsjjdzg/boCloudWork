@@ -19,13 +19,13 @@ public class SuperEntity<T extends Model> extends Model<T> {
 	 * 主键Id
 	 */
 	@TableId("id")
-	private Long id;
+	private int id;
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
