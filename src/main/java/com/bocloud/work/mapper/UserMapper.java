@@ -11,9 +11,10 @@ public interface UserMapper extends SuperMapper<User>{
     boolean update(User user);    
     boolean delete(int id);    
     User findById(int id);    
-    List<User> findAll();
+    List<User> findAllList();
 	static boolean ajaxValidateusername(String username) {
 		return false;
 	}  
-	
+	//定义通过用户名获取用户对象的方法
+	public User getUserByName(String username);
 }

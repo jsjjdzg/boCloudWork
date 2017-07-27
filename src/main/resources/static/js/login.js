@@ -48,7 +48,14 @@ $(function() {
  * 例如input名称为：loginname，那么调用validateLoginname()方法。
  */
 function invokeValidateFunction(inputName) {
-	if(validateusername() == true){
+	if(validateusername() == true ){
+//		console.log("SSSSSSSSS");
+		inputName = inputName.substring(0, 1).toUpperCase() + inputName.substring(1);
+		var functionName = "validate" + inputName;
+		return "(" + functionName + ")";	
+	}
+	
+	if(validateuserpwd() == true ){
 //		console.log("SSSSSSSSS");
 		inputName = inputName.substring(0, 1).toUpperCase() + inputName.substring(1);
 		var functionName = "validate" + inputName;
@@ -93,6 +100,7 @@ function validateuserpwd() {
 		$("#userpwderror").text("密码长度必须在3 ~ 20之间！");
 		bool = false;
 	}
+	console.log(bool);
 	return bool;
 }
 
@@ -105,6 +113,7 @@ function validateVerifyCode() {
 	var value = $("#verifyCode").val();
 	if(!value) {//非空校验
 		$("#verifyCodeError").css("display", "");
+		
 		$("#verifyCodeError").text("验证码不能为空！");
 		bool = false;
 	} else if(value.length != 4) {//长度不为4就是错误的

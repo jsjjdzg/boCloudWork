@@ -3,7 +3,8 @@
 <mapper namespace="com.bocloud.work.mapper.UserMapper">
 
 	 <insert id="save" parameterType="User">  
-        insert into user(name,pwd,department_id,status) values(#{name},#{pwd},#{department_id},#{status})  
+        insert into user(name,pwd,department_id,status,job_id,email,salarya,salaryb,salaryc,salaryd,salarye) 
+        values(#{name},#{pwd},#{department_id},#{status},#{job_id},#{email},#{salarya},#{salaryb},#{salaryc},#{salaryd},#{salarye})
     </insert>  
       
     <update id="update" parameterType="User">    
@@ -18,10 +19,13 @@
     <select id="findById" parameterType="int" resultType="User">    
         select id,name,pwd,department_id departmentid,status from user where id=#{id}    
     </select>    
-     <select id="findAll" resultType="User">    
-        select id,name,pwd,department_id departmentid,status from user    
+     <select id="findAllList" resultType="User">    
+        select id,name,pwd,department_id departmentid,status,job_id jobid,email,salarya,salaryb,salaryc,salaryd,salarye from user    
     </select>   
-  	
+  	 <select id="getUserByName" parameterType="string" resultMap="BaseResultMap">
+            <!-- 此处写sql语句,#{Mapper类传入的参数} -->
+            select * from user where name = #{name}
+    </select>
 	
 	<!-- 通用查询映射结果 -->
 	<resultMap id="BaseResultMap" type="com.bocloud.work.entity.User">

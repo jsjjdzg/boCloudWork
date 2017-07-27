@@ -14,8 +14,11 @@ public interface IUserService extends IService<User>{
 	boolean update(User user);
 	boolean delete(int id);
 	User findById(int id);	
-	List<User> findAll();
+	List<User> findAllList();
 	static boolean ajaxValidateusername(String username) {
 		return UserMapper.ajaxValidateusername(username);
 	} 
+	
+	 public User checkLogin(String name, Long pwd);
+	 
 }
